@@ -1,20 +1,21 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 
+import { Link } from "react-router-dom";
+
 const PostItem = ({ post }) => {
   const { id, title, description, date, image } = post;
 
   return (
     <section className="post">
-      <img src={image} alt="" />
-      <p className="title">{title}</p>
+      <Link to={`/post-details/${id}`}>
+        <img src={image} alt="" />
+      </Link>
+      <Link to={`/post-details/${id}`}>
+        <p className="title">{title}</p>
+      </Link>
       <p className="date">Posted at - {date}</p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste optio
-        itaque quod nulla culpa voluptates minus dolorem, neque quidem officiis?
-        Accusantium illo temporibus doloribus ratione eum aliquam nesciunt
-        voluptas possimus.
-      </p>
+      
       <hr />
     </section>
   );

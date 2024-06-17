@@ -4,6 +4,7 @@ import './App.css'
 import Main from './layout/Main'
 import Posts, { loader as postsLoader} from "./pages/Posts";
 import Create from "./pages/Create";
+import Details, {loader as detailsLoader} from "./pages/Details";
 
 function App() {
 
@@ -20,6 +21,11 @@ function App() {
         {
           path: "/create-post",
           element: <Create /> 
+        },
+        {
+          path: "/post-details/:id",
+          element: <Details />,
+          loader: detailsLoader,
         }
       ]
     }

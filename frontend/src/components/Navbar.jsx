@@ -1,9 +1,11 @@
-import { NavLink } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 
 const Navbar = () => {
   return (
     <nav>
+      <Link to={"/"} >
         <h1>BLOG.io</h1>
+      </Link>
         <div>
             <NavLink to={"/"} >Posts</NavLink>
             <NavLink to={"/create-post"} >Create Post</NavLink>
