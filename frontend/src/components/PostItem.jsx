@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-
+import { CalendarDaysIcon } from "@heroicons/react/24/solid";
 import { Link } from "react-router-dom";
 
 const PostItem = ({ post }) => {
@@ -14,8 +14,11 @@ const PostItem = ({ post }) => {
       <Link to={`/post-details/${id}`}>
         <p className="title">{title}</p>
       </Link>
-      <p className="date">Posted at - {date}</p>
-      
+      <p className="date">
+        <CalendarDaysIcon className="clockIcon" />
+         Posted at - <span> {date} </span> 
+      </p>
+
       <hr />
     </section>
   );
