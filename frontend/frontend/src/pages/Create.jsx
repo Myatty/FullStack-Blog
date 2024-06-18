@@ -1,9 +1,8 @@
-import PostForm from "../components/PostForm";
-
 const Create = () => {
   return (
     <>
-      <PostForm />
+      <h1>Create your Post Here</h1>
+      <p>Still developing</p>
     </>
   );
 };
