@@ -3,8 +3,9 @@ import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import './App.css'
 import Main from './layout/Main'
 import Posts, { loader as postsLoader} from "./pages/Posts";
-import Create from "./pages/Create";
+import Create, { action as postCreateAction } from "./pages/Create";
 import Details, {loader as detailsLoader} from "./pages/Details";
+import Edit from "./pages/Edit";
 
 function App() {
 
@@ -20,12 +21,17 @@ function App() {
         },
         {
           path: "/create-post",
-          element: <Create /> 
+          element: <Create />,
+          action: postCreateAction,
         },
         {
           path: "/post-details/:id",
           element: <Details />,
           loader: detailsLoader,
+        },
+        {
+          path: "edit-post/:id",
+          element: <Edit />,
         }
       ]
     }

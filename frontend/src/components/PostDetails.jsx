@@ -19,6 +19,14 @@ const PostDetails = ({ post }) => {
       </div>
       <img src={image} alt={title} />
       <p className="description">{description}</p>
+      <div className="detail-footer">
+        <Link to="/edit-post/:id" >
+          <p className="btn sm">Edit</p>
+        </Link>
+        <Link to="/delete-post/:id" >
+          <p className="btn sm">Delete</p>
+        </Link>
+      </div>
       <hr />
     </section>
   );

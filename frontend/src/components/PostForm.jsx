@@ -1,8 +1,16 @@
+import { ArrowLeftIcon } from "@heroicons/react/24/solid";
+import { Form, Link } from "react-router-dom";
+
 const PostForm = () => {
   return (
     <section className="form-section">
-      <p>Create your post Now !</p>
-      <form action="">
+      <div className="detail-header">
+        <p>Create your post Now !</p> 
+        <Link to={"/"}><ArrowLeftIcon className="arrowIcon" /></Link>
+        
+      </div>
+
+      <Form method="POST">
         <div className="form-input">
           <label htmlFor="form-title">Title</label>
           <input type="text" id="form-title" name="title" />
@@ -24,10 +32,9 @@ const PostForm = () => {
             rows="3"
           ></textarea>
         </div>
-        
-          <button className="btn">Post</button>
-        
-      </form>
+
+        <button className="btn">Post</button>
+      </Form>
     </section>
   );
 };
