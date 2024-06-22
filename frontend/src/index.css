@@ -121,8 +121,9 @@ nav div a.active {
   padding: 10px 0px;
   border-radius: 8px;
   margin-top: 5px;
-  width: 100%;
-  margin: auto;
+  width: 50%;
+  margin: 3px;
+  cursor: pointer;
 }
 
 .btn:hover{
@@ -136,12 +137,14 @@ nav div a.active {
   font-size: 15px;
   display: inline;
   margin-right: 10px;
+  cursor: pointer;
 }
 
 .detail-footer{
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
+  
 }
 
 hr{

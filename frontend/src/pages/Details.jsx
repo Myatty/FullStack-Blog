@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { useLoaderData } from "react-router-dom";
+import { redirect, useLoaderData } from "react-router-dom";
 import PostDetails from "../components/PostDetails";
 
 const Details = () => {
@@ -25,3 +25,15 @@ export const loader = async ({ request, params }) => {
     //
   }
 };
+
+export const action = async({request, params}) => {
+
+  const response = await fetch(`http://localhost:8000/posts/${params.id}`,{
+    method: request.method
+  })
+
+  if(!response.ok){
+    //
+  }
+  return redirect("/");
+}

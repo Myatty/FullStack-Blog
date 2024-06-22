@@ -4,7 +4,7 @@ import './App.css'
 import Main from './layout/Main'
 import Posts, { loader as postsLoader} from "./pages/Posts";
 import Create, { action as postCreateAction } from "./pages/Create";
-import Details, {loader as detailsLoader} from "./pages/Details";
+import Details, {action as deleteAction, loader as detailsLoader} from "./pages/Details";
 import Edit from "./pages/Edit";
 
 function App() {
@@ -28,6 +28,7 @@ function App() {
           path: "/post-details/:id",
           element: <Details />,
           loader: detailsLoader,
+          action : deleteAction,
         },
         {
           path: "edit-post/:id",
