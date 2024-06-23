@@ -6,7 +6,7 @@ import { redirect } from "react-router-dom";
 const Create = () => {
   return (
     <>
-      <PostForm />
+      <PostForm header={"Create Your Post Now!"} btnText={"Post"} />
     </>
   );
 };

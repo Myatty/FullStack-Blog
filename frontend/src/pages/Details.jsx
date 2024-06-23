@@ -1,9 +1,9 @@
 /* eslint-disable no-unused-vars */
-import { redirect, useLoaderData } from "react-router-dom";
+import { redirect, useLoaderData, useRouteLoaderData } from "react-router-dom";
 import PostDetails from "../components/PostDetails";
 
 const Details = () => {
-  const post = useLoaderData();
+  const post = useRouteLoaderData("post-detail");
   console.log(post);
 
   return (
@@ -33,7 +33,7 @@ export const action = async({request, params}) => {
   })
 
   if(!response.ok){
-    throw new Error("Something Wrong with your Request!");
+    throw new Error("Something went Wrong with your Request!");
   }
   return redirect("/");
 }

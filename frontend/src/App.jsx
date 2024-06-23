@@ -27,15 +27,22 @@ function App() {
           action: postCreateAction,
         },
         {
-          path: "/post-details/:id",
-          element: <Details />,
+          path: ":id",
+          id: "post-detail",
           loader: detailsLoader,
-          action : deleteAction,
+          children: [
+            {
+              index: true,
+              element: <Details />,
+              action : deleteAction,
+            },
+            {
+              path: "edit-post",
+              element: <Edit />,
+            }
+          ]
         },
-        {
-          path: "edit-post/:id",
-          element: <Edit />,
-        }
+        
       ]
     }
   ])
