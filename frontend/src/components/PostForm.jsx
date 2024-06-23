@@ -1,14 +1,26 @@
 import { ArrowLeftIcon } from "@heroicons/react/24/solid";
-import { Form, Link } from "react-router-dom";
+import { Form, Link , useActionData} from "react-router-dom";
 
 const PostForm = () => {
+
+  const data = useActionData();
+
   return (
     <section className="form-section">
       <div className="detail-header">
         <p>Create your post Now !</p> 
         <Link to={"/"}><ArrowLeftIcon className="arrowIcon" /></Link>
-        
       </div>
+
+      { data && data.errors && (
+        <ul>
+          {
+            Object.values(data.errors).map(err => (
+              <li key={err}>{err}</li>
+            ))
+          }
+        </ul>
+      )}
 
       <Form method="POST">
         <div className="form-input">

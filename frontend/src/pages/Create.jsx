@@ -16,6 +16,7 @@ export default Create;
 export const action = async ({request, params}) => {
 
   const data = await request.formData();
+
   const postData = {
     id : uuid(),
     title: data.get("title"),
@@ -32,9 +33,13 @@ export const action = async ({request, params}) => {
     body: JSON.stringify(postData),
   });
 
-  if(!response.ok){
-    // code
+  if(response.status === 422){
+    return response;
   }
-    return redirect("/");
+
+  if(!response.ok){
+    throw new Error("");
+  }
+  return redirect("/");
   
 }
