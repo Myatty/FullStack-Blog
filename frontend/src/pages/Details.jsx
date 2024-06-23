@@ -33,7 +33,7 @@ export const action = async({request, params}) => {
   })
 
   if(!response.ok){
-    //
+    throw new Error("Something Wrong with your Request!");
   }
   return redirect("/");
 }

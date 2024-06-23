@@ -6,6 +6,7 @@ import Posts, { loader as postsLoader} from "./pages/Posts";
 import Create, { action as postCreateAction } from "./pages/Create";
 import Details, {action as deleteAction, loader as detailsLoader} from "./pages/Details";
 import Edit from "./pages/Edit";
+import Error from "./pages/Error";
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
     {
       path: "/",
       element: <Main />,
+      errorElement: <Error />,
       children: [
         {
           index: true,
