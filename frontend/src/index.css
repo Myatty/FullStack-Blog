@@ -183,3 +183,11 @@ hr{
   background-color: #000;
   color: #fff;
 }
+
+@media (max-width: 480px){
+  .main,
+  .details,
+  .form-section{
+    width: 100%;
+  }
+}
