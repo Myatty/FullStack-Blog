@@ -3,10 +3,12 @@ import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import './App.css'
 import Main from './layout/Main'
 import Posts, { loader as postsLoader} from "./pages/Posts";
-import Create, { action as postCreateAction } from "./pages/Create";
+import { action as postCreateAction } from "./components/PostForm";
+import { action as postUpdateAction } from "./components/PostForm";
 import Details, {action as deleteAction, loader as detailsLoader} from "./pages/Details";
 import Edit from "./pages/Edit";
 import Error from "./pages/Error";
+import Create from "./pages/Create";
 
 function App() {
 
@@ -39,6 +41,7 @@ function App() {
             {
               path: "edit-post",
               element: <Edit />,
+              action: postUpdateAction,
             }
           ]
         },

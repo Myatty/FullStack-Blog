@@ -7,7 +7,7 @@ const Edit = () => {
 
   return (
     <>
-        <PostForm header={"Edit Your Post!"} btnText={"Update Post"} oldPostData={post} />
+        <PostForm header={"Edit Your Post!"} btnText={"Update Post"} oldPostData={post} method={"patch"} />
     </>
   )
 }
