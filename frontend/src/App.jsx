@@ -9,6 +9,7 @@ import Details, {action as deleteAction, loader as detailsLoader} from "./pages/
 import Edit from "./pages/Edit";
 import Error from "./pages/Error";
 import Create from "./pages/Create";
+import Auth from "./pages/Auth";
 
 function App() {
 
@@ -28,6 +29,12 @@ function App() {
           element: <Create />,
           action: postCreateAction,
         },
+
+        {
+          path: "/auth",
+          element: <Auth />,
+        },
+        
         {
           path: ":id",
           id: "post-detail",

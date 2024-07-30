@@ -15,7 +15,7 @@ const Posts = () => {
 export default Posts;
 
 export const loader = async () => {
-  const response = await fetch("http://localhost:8000/posts");
+  const response = await fetch("http://localhost:8080/posts");
 
   if (response.ok) {
     const data = await response.json();
