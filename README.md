@@ -10,4 +10,6 @@ A Fullstack web app where users can Sign up , sign in and upload posts to record
   <li>AND ... More Functions are soon to be added!</li>
 </ul>
 
+### The auth-add branch was developed using an Authentication token, which can provide secure login and registration.
+
 ## Stil in Progress
