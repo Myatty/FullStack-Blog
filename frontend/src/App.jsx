@@ -9,7 +9,7 @@ import Details, {action as deleteAction, loader as detailsLoader} from "./pages/
 import Edit from "./pages/Edit";
 import Error from "./pages/Error";
 import Create from "./pages/Create";
-import Auth from "./pages/Auth";
+import Auth , {action as authAction} from "./pages/Auth";
 
 function App() {
 
@@ -33,6 +33,7 @@ function App() {
         {
           path: "/auth",
           element: <Auth />,
+          action : authAction,
         },
         
         {
