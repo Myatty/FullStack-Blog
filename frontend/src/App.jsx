@@ -9,7 +9,9 @@ import Details, {action as deleteAction, loader as detailsLoader} from "./pages/
 import Edit from "./pages/Edit";
 import Error from "./pages/Error";
 import Create from "./pages/Create";
+import  { loader as logoutLoader } from "./pages/Logout";
 import Auth , {action as authAction} from "./pages/Auth";
+import { tokenLoader } from "./util/auth";
 
 function App() {
 
@@ -18,6 +20,8 @@ function App() {
       path: "/",
       element: <Main />,
       errorElement: <Error />,
+      id: "root",
+      loader: tokenLoader,
       children: [
         {
           index: true,
@@ -35,7 +39,10 @@ function App() {
           element: <Auth />,
           action : authAction,
         },
-        
+        {
+          path: "/logout",
+          loader: logoutLoader, 
+        },
         {
           path: ":id",
           id: "post-detail",
