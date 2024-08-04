@@ -11,7 +11,7 @@ A Fullstack web app where users can Sign up , sign in and upload posts to record
 </ul>
 
 ## Authentication and Security
-The latest version of Blog.io was developed in the auth-add branch. This branch introduces an authentication token system, providing secure login and registration for users.
+The latest version of Blog.io was developed in the auth-add branch.This branch introduces an authentication token system, providing secure login and registration for users.
 
 ## Current Status
 Blog.io is now complete with its latest features developed in the auth-add branch. 
